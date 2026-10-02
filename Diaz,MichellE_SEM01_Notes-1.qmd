@@ -1,0 +1,114 @@
+---
+title: "Article Notes: The Two-Step Approach to Structural Equation Modeling"
+author: "Michelle Diaz"
+date: today
+format:
+  html:
+    toc: true
+    number-sections: true
+    embed-resources: true
+---
+
+title: "Article Notes: The Two-Step Approach to Structural Equation Modeling"
+author: "Michelle Diaz"
+date: today
+format:
+  html:
+    toc: true
+    number-sections: true
+    embed-resources: true
+---
+
+
+# Introduction
+
+- Structural equation modeling (SEM) is an advanced framework for testing complex relationships between observed and unobserved (latent) variables.
+- Before this article, researchers were often testing the measurement model and the structural model all at once, in a single step. When a combined model didn't fit well, there was no clean way to tell whether the problem was bad measurement (the questions weren't cleanly capturing the construct) or bad theory (the causal arrows were wrong). That diagnostic confusion is interpretational confounding.
+- The introduction sets up the problem that the rest of the article's argument, the two-step approach, nested models, parsimony, exists to solve: giving researchers a way to actually diagnose where a poor-fitting model is going wrong.
+
+# Background
+
+## Exploratory Versus Confirmatory Analyses
+
+- Exploratory analysis is when there's no locked-in theory yet, you're poking around in the data, trying different combinations, letting the data suggest possible relationships.
+- Confirmatory analysis is when you already have a specific theory (for example, "stress causes low commitment") and you're testing whether the data supports it.
+- The problem: if you explore the data first, adjusting a model until it fits well, and then present that final model as if it were a confirmatory test of a theory you held from the start, you're misrepresenting the analysis. You're really just fitting the model to that one dataset's quirks and noise, not testing a real theory. Anyone else testing the same "theory" on new data would likely get a different result, because there wasn't a genuine theory being tested to begin with, just a model shaped after the fact to match what was already there.
+
+## Complementary Approaches for Theory Testing Versus Predictive Application
+
+- These are two different goals a researcher might have when using the same statistical model.
+- Theory testing: the researcher cares about *why* a relationship exists, understanding whether their theory about behavior is correct. This requires being cautious about adjusting the model just to improve fit, since each connection needs real theoretical reasoning behind it.
+- Predictive application: the researcher doesn't necessarily care about the "why," they care whether the model accurately predicts an outcome (for example, which employees are likely to quit). They have more freedom to adjust things purely to improve predictive accuracy, since the goal is a useful forecasting tool, not an explanation.
+- These two goals aren't competing, they're complementary: different valid purposes the same two-step approach can serve, depending on what the researcher is trying to accomplish.
+
+## Estimation Methods
+
+- Once a model is drawn (boxes and arrows), you still need actual numbers showing how strong each connection is. The method used to generate those numbers from raw data is the estimation method.
+- The most common method in SEM is maximum likelihood estimation. In plain terms: for each possible guess at a connection's strength, the method asks "if this guess were true, how likely is it that I'd see the exact data I actually collected?" It then picks whichever guess makes the real, observed data look the most probable.
+- So maximum likelihood isn't searching for some absolute truth, it's finding the specific numbers that make the actual collected data make the most sense.
+
+# Confirmatory Measurement Model
+
+## Need for Unidimensional Measurement
+
+- Unidimensionality means each group of survey questions measures one thing, and only one thing. If I have four questions meant to measure stress, and three of them clearly do, but the fourth is secretly also picking up something like workload pressure, that question is muddying the stress score, it's no longer a clean read on stress alone.
+- This isn't something you judge from how well-written the questions are. It's tested after the fact, using the actual answers people gave.
+- **Internal consistency**: look at just the stress questions, ignore everything else. Do they agree with each other across everyone who took the survey, does someone who scores high on one tend to score high on the others? If yes, that's evidence they belong together as one group.
+- **External consistency**: zoom out and compare the stress group as a whole against the other constructs, like job satisfaction and commitment. Does stress behave like its own distinct thing, rather than blurring into them? If two constructs track almost perfectly together across the sample, that's a flag they might be overlapping rather than measuring two separate things.
+- Put together, internal consistency confirms the questions belong together within their own group, and external consistency confirms the group is still its own separate thing compared to the other groups.
+
+## Specification
+
+- Specification means deciding, on paper, before running any numbers, which specific questions belong to which construct. For example: "questions one through four represent stress, questions five through eight represent commitment, questions nine through twelve represent job satisfaction." This is the blueprint, declaring that a question connects to a construct, before any testing happens.
+- This decision has to be made deliberately, based on theory, rather than letting the data figure out which questions group together. Letting the data decide after the fact is the exploratory move; declaring the blueprint first, based on reasoning about what each question is asking, is the confirmatory move.
+- So specification is the declaration: "here's my theory about which questions measure which construct." Everything after that (assessment of fit, unidimensionality checks) is testing whether that declared structure actually holds up.
+
+## Assessment of Fit
+
+- Each model produces a chi-square, basically a badness-of-fit score, where lower means the model fits the data better.
+
+## Respecification
+
+- If a specified model is tested and the fit turns out poor, the data doesn't support the original blueprint, the researcher needs to find the specific part of the blueprint causing the poor fit, then adjust it.
+- Options when one question isn't behaving like the others in its group: exclude it from that construct and explain why, or reassign it to a different construct it may actually fit better.
+- Respecification should still be guided by theory, not just by whatever change happens to improve the chi-square. Repeatedly moving questions around and dropping ones that hurt the fit score, purely chasing a better number, slides back into the exploratory trap: shaping the model after the fact rather than testing a real theory. Any respecification decision should come with a real theoretical explanation, not just "it improved the fit."
+- There's a meaningful difference between making one or two theoretically justified adjustments versus repeatedly reshuffling the model until the numbers finally cooperate. The first is legitimate respecification. The second is exploratory analysis wearing a confirmatory disguise. If a model needs three, four, five rounds of adjustment just to chase a better fit score, at some point the honest conclusion may be that the original theory was wrong, not a failure that needs to be hidden through endless adjustment.
+
+# One-Step Versus Two-Step Modeling Approaches
+
+## The Confirmatory Structural Model
+
+- The structural model is where the causal arrows go in. Once you trust that your constructs (say, job satisfaction, commitment, stress) are each cleanly measured, you draw arrows between them, like stress causes low commitment, and test whether that relationship actually holds up in the data.
+- This is different from the measurement model because the measurement model has no arrows between constructs at all, it's only checking that each group of questions cleanly represents its own construct.
+
+## Recommended Two-Step Modeling Approach
+
+- **Step 1 (measurement model):** Before testing any cause-and-effect, you check whether each group of questions actually hangs together and measures the one thing it's supposed to measure, not bleeding into another construct. No causal arrows yet.
+- **Step 2 (structural model):** Once Step 1 confirms the constructs are cleanly measured, you stop tracking individual questions and work with one overall score per construct. Then you draw the actual causal arrows and test whether those relationships hold up.
+- The reason Step 1 has to come first: if the stress questions are secretly also picking up commitment, and a relationship turns up between them, there's no way to tell if that's a real relationship or just the questions overlapping and measuring the same thing twice. Bad measurement can fake you into seeing a relationship that isn't really there, or hide one that is.
+
+### Nested Models
+
+- Picture three boxes: job satisfaction, commitment, stress. A "full" model draws every possible arrow between them. A stripped-down version removes just one arrow, keeping the rest. That stripped-down version is nested inside the full one, same model, one less piece, not a separate unrelated model.
+- To decide if dropping an arrow was the right call, each version produces a chi-square. If removing the arrow barely changes the chi-square, the simpler model explains the data almost as well, so that arrow wasn't doing much work and can be dropped. If removing it makes the chi-square jump a lot, the arrow mattered and should stay.
+- The formal tool for this is the chi-square difference test, or sequential chi-square difference tests (SCDTs) when done one comparison at a time down a chain. The difference between the two chi-squares follows a known distribution with its own cutoff, like a margin of error. Below the cutoff, not a significant change, the extra complexity wasn't needed. Above it, significant, the complexity was real and necessary.
+- The paper formalizes this with five specific nested models, compared in sequence:
+  - **Mt** — the full theoretical model, every hypothesized arrow drawn.
+  - **Ms** — a less restricted version, loosening things further than Mt.
+  - **Mc** — a more constrained version, fixing or equating some things Mt let vary freely.
+  - **Mu** — a one-factor model, testing whether the separate constructs might actually just be one single underlying thing.
+  - **M0** — the null model, the baseline, assuming essentially no relationships at all.
+- At each fork in the comparison tree, non-significant means the simpler model didn't lose meaningful fit, so you accept it and move forward with it, that's permission to simplify further. Significant means simplifying broke something real, so you keep the more complex model and stop simplifying down that path.
+
+### Parsimony
+
+- Parsimony is choosing the simpler explanation when two models explain the data about equally well.
+- Two reasons this matters: (1) clarity, it's easier to present and explain a simpler model to an audience than one with extra factors complicating what's being conveyed, and (2) degrees of freedom, every arrow is a claim that costs you statistical power to estimate, so fewer arrows leave more degrees of freedom in reserve while still explaining the data just as well.
+
+## Advantages of the Two-Step Approach
+
+- Testing measurement and structure together risks interpretational confounding, not being able to tell whether a problem is bad measurement or bad theory. Separating the steps isolates where a problem is actually coming from.
+
+# References
+
+Anderson, James C., and David W. Gerbing. 1988. "Structural Equation Modeling in Practice: A Review and Recommended Two-Step Approach." *Psychological Bulletin* 103 (3): 411-423. https://doi.org/10.1037/0033-2909.103.3.411.
